@@ -1,0 +1,30 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Find a Cruise: product and delivery case study."><title>Find a Cruise · in action. · Find a Cruise</title><link rel="icon" href="data:,"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="prototype.css"><script defer="" src="model.js"></script><script defer="" src="app.js"></script></head><body><a class="skip" href="#main">Skip to content</a><header class="site-header"><a class="wordmark" href="index.html">Sebastian Amodio - Case Study - Nybble Group</a><nav class="global-nav" aria-label="Primary navigation"><a href="index.html">Overview</a><a href="product.html">Product</a><a href="stories/index.html">Stories</a><a href="prototype.html" aria-current="page">Prototype</a><a href="delivery.html">Delivery</a><a href="qa.html">Q&amp;As</a></nav></header><main id="main" tabindex="-1" class="prototype-page"><div class="page-heading"><h1>Find a Cruise · Prototype</h1><p class="lead">Non-production functional demonstration · Illustrative data</p></div><div class="prototype-toolbar"><span>Choose criteria, explore date states, then try a search.</span><button id="reset-prototype" type="button">Reset prototype selections</button></div><p class="muted">Demonstration date: September 2026. Earlier months stay visible but disabled; June 2028 has no available sailings.</p><noscript><p class="callout">JavaScript is required for this interactive demonstration. All product, story, delivery and evidence content remains available.</p></noscript><div id="prototype-demo">
+  <header class="masthead"><div class="brand">ROYAL CARIBBEAN<span>INTERNATIONAL</span></div><nav aria-label="Illustrative Home Page navigation"><a class="home-link" href="#consumer" aria-current="location">HOME</a></nav></header>
+  <div class="hero"><p class="context-label">Illustrative Home Page context — outside component scope</p></div>
+  <div class="prototype-main">
+    <p class="scope-label">POC scope — Find a Cruise component</p>
+    <section id="consumer" aria-label="Find a Cruise">
+      <div class="filter-row">
+        <button id="trigger-destination" class="filter" aria-expanded="false" aria-controls="panel-destination" data-action="panel" data-value="destination"><span class="filter-copy"><span class="filter-label">Cruising To</span><span id="destination-value">Any Destination</span></span><span class="chevron" aria-hidden="true">⌄</span></button>
+        <button id="trigger-port" class="filter" aria-expanded="false" aria-controls="panel-port" data-action="panel" data-value="port"><span class="filter-copy"><span class="filter-label">Departing From</span><span id="port-value">Any Departure Port</span></span><span class="chevron" aria-hidden="true">⌄</span></button>
+        <button id="trigger-date" class="filter" aria-expanded="false" aria-controls="panel-date" data-action="panel" data-value="date"><span class="filter-copy"><span class="filter-label">Leaving</span><span id="date-value">Any Date</span></span><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="16" rx="1"></rect><path d="M3 10h18M8 2v6M16 2v6M7 14h2m2 0h2m2 0h2M7 17h2m2 0h2"></path></svg></button>
+        <div class="search-cell"><button class="primary" data-action="search">Search Cruises</button></div>
+      </div>
+      <section id="panel-destination" class="panel" aria-label="Destination options" hidden=""></section>
+      <section id="panel-port" class="panel" aria-label="Departure port options" hidden=""></section>
+      <section id="panel-date" class="panel" aria-label="Departure month range" hidden=""></section>
+      <p id="validation" class="validation" role="alert" hidden="">Select at least one search criterion: a destination, a departure port, or a complete departure month range.</p>
+    </section>
+    <section id="submission" class="submission" tabindex="-1" aria-labelledby="submission-title" hidden=""></section>
+    <details class="reviewer">
+      <summary>About this prototype </summary>
+      <div class="review-content">
+      <p class="disclaimer">This non-production prototype demonstrates the consumer-visible behavior described in the proposed user stories and acceptance criteria. It uses illustrative data and temporary assumptions. It does not prescribe the final visual design, technical architecture or integration mechanism.</p>
+      <p class="disclaimer">Functional interaction prototype — not a final visual design.</p>
+      <h3 class="assumptions-title">Material assumptions</h3><ul id="assumptions"></ul>
+      <p class="data-note">Illustrative data · Demo calendar 2026–2029</p>
+      </div>
+    </details>
+  </div>
+  <p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
+</div><p class="muted">Selections are retained in this browser tab’s session. Storage-disabled browsers retain selections only while this page remains open. <a href="stories/index.html">Review observable behaviors by story →</a></p><footer class="presentation-footer"><a class="button secondary" href="stories/index.html">Back to Stories</a><a class="button next-page" href="delivery.html">Delivery plan</a></footer></main></body></html>

@@ -1,0 +1,74 @@
+{
+  "time": "2026-09-25T20:30:20.272Z",
+  "results": [
+    {
+      "id": "POC-AC-01",
+      "result": "PASS"
+    },
+    {
+      "id": "POC-AC-09",
+      "result": "PASS"
+    },
+    {
+      "id": "POC-AC-10",
+      "result": "PASS"
+    },
+    {
+      "id": "POC-AC-11",
+      "result": "PASS"
+    },
+    {
+      "id": "POC-AC-02",
+      "result": "PASS"
+    },
+    {
+      "id": "POC-AC-03",
+      "result": "PASS"
+    },
+    {
+      "id": "POC-AC-07",
+      "result": "PASS"
+    },
+    {
+      "id": "POC-AC-08",
+      "result": "PASS"
+    },
+    {
+      "id": "POC-AC-14",
+      "result": "PASS"
+    },
+    {
+      "id": "POC-AC-17",
+      "result": "PASS"
+    },
+    {
+      "id": "POC-AC-13",
+      "result": "PASS"
+    },
+    {
+      "id": "POC-AC-04",
+      "result": "PASS"
+    },
+    {
+      "id": "POC-AC-15",
+      "result": "PASS"
+    },
+    {
+      "id": "POC-AC-06",
+      "result": "PASS"
+    },
+    {
+      "id": "POC-AC-05",
+      "result": "PASS"
+    },
+    {
+      "id": "POC-AC-12",
+      "result": "PASS"
+    },
+    {
+      "id": "POC-AC-16",
+      "result": "PASS"
+    }
+  ],
+  "errors": []
+}

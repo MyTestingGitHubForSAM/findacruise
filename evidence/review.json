@@ -1,0 +1,30 @@
+{
+  "results": [
+    {
+      "name": "Five stories and section navigation",
+      "result": "PASS"
+    },
+    {
+      "name": "Story retained after prototype and Back history",
+      "result": "PASS"
+    },
+    {
+      "name": "Delivery tabs remain available",
+      "result": "PASS"
+    },
+    {
+      "name": "Mobile selector and layouts",
+      "result": "PASS"
+    },
+    {
+      "name": "Prototype past-month guard and simulated search",
+      "result": "PASS"
+    },
+    {
+      "name": "Backup unchanged",
+      "result": "PASS"
+    }
+  ],
+  "errors": [],
+  "time": "2026-09-25T20:30:52.722Z"
+}
