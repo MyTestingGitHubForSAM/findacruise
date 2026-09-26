@@ -27,3 +27,8 @@ body.prototype-expanded>.site-header,body.prototype-expanded .presentation-foote
 .fullscreen-controls #exit-prototype-fullscreen{background:var(--navy);border-color:var(--navy);color:white}
 .prototype-fullscreen #prototype-demo{border:0;border-radius:0;box-shadow:none;min-height:calc(100% - 60px)}
 @media(max-width:760px){.prototype-toolbar{flex-wrap:wrap;gap:10px}.prototype-toolbar>span{flex-basis:100%}.fullscreen-toolbar{padding:10px 12px;gap:8px;flex-wrap:wrap}.fullscreen-controls{margin-left:auto;gap:6px}.fullscreen-controls button{font-size:11px;padding:9px 10px}}
+/* Overview has one inline action; subsequent pages retain fixed navigation. */
+body[data-page="index"] .presentation-footer{position:static;inset:auto;z-index:auto;min-height:0;margin:22px 0 0;padding:0;border:0;background:transparent;backdrop-filter:none;box-shadow:none;justify-content:flex-start}
+body[data-page="index"] .presentation-footer .next-page{margin-left:0}
+body[data-page="index"] main{padding-bottom:60px}
+@media(max-width:760px){body[data-page="index"] main{padding-bottom:40px}}
