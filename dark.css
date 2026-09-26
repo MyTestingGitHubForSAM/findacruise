@@ -1,0 +1,49 @@
+/* Interior presentation only: the approved cover retains its original palette. */
+html:has(.dark-ui){background:#071827;color-scheme:dark}
+.dark-ui{--ink:#edf5fa;--muted:#abc0d0;--blue:#8ae7dc;--navy:#0b2236;--paper:#071827;--line:#274052;background:#071827;color:var(--ink)}
+.dark-ui a{color:#8ae7dc}.dark-ui :is(a,button,select,summary):focus-visible{outline-color:#8ae7dc}
+.dark-ui .site-header{background:#081b2bed;border-color:#243c4e}.dark-ui .wordmark{color:#f1f7fb}.dark-ui .identity-mark{background:transparent;border-color:#456270;color:#8ae7dc}.dark-ui .identity-context{color:#abc0d0}
+.dark-ui .global-nav a{color:#c1d1dd}.dark-ui .global-nav a:hover{background:#142f40;color:white}.dark-ui .global-nav a[aria-current]{background:#14373e;color:#a5f4e9}
+.dark-ui .page-heading h1:after{background:#8ae7dc;height:3px;width:36px}
+.dark-ui .button{background:#8ae7dc;color:#06282c;box-shadow:none}.dark-ui .button:hover{background:#b2f3eb;box-shadow:0 5px 20px #0002}.dark-ui .button.secondary{background:transparent;border-color:#345063;color:#d4e4ed}.dark-ui .button.secondary:hover{background:#153043}
+.dark-ui .presentation-footer{background:#081b2bf5;border-color:#243c4e;box-shadow:none}.dark-ui[data-page="index"] .presentation-footer{background:transparent}
+.dark-ui .ocean-art{background:#0c2b40 url('assets/island-cruise.png') 48% center/cover;border:1px solid #2b4656;box-shadow:none;border-radius:20px}
+.dark-ui :is(.product-tile,.criterion,.question,.delivery-module,.table-wrap,details,figure,.story-tools){background:#0d2334;border-color:#274052;box-shadow:none}
+.dark-ui .product-tile{border-radius:16px}.dark-ui .actor-tile{background:transparent;border-color:#3a5969}.dark-ui .tile-1{background:#102c3a;border-color:#315361}.dark-ui .tile-1 p{color:#d1e0e9}.dark-ui .tile-2{background:#0d2334}.dark-ui .tile-symbol{color:#8ae7dc;display:inline-flex}
+.dark-ui .story-tabs a{color:#b7cbd8}.dark-ui .story-tabs a:hover{background:#183446}.dark-ui .story-tabs a.selected{background:#16383e;color:#b5f8ee}.dark-ui .story-code{color:#aac5d6;border-color:#385366}.dark-ui .story-tabs a.selected .story-code{background:#8ae7dc;color:#06282c;border-color:#8ae7dc}.dark-ui .story-jumps a{color:#afc5d4;border-left-color:#294457}.dark-ui .story-jumps a:hover{background:#15313e;color:#a8f1e6;border-color:#8ae7dc}
+.dark-ui .story-callout{background:#102f3c;border-color:#315766;color:#dfedf3!important}.dark-ui [id$="-value"] .story-callout{background:#0d2334;border-color:#274052}.dark-ui .gherkin{background:#091b2b;border-color:#365a67;color:#cedfe9}
+.dark-ui .badge{background:#132f40;border-color:#365266;color:#b9dce8}.dark-ui .blocking-status{background:transparent;border-color:#806f48;color:#efd08c}.dark-ui .nonblocking-status{background:transparent;border-color:#3a5668;color:#adc4d4}.dark-ui .question dt{color:#9bb9cb}.dark-ui .criterion-heading>a{color:#a4c4d3}
+.dark-ui figure img{background:#fff;border-radius:8px}.dark-ui th{background:#153143;color:#d5e8ef}.dark-ui td,.dark-ui th{border-color:#294354}.dark-ui tbody tr:hover{background:#153040}.dark-ui .table-wrap td:before{color:#9cbdce}
+.dark-ui .module-selectors{background:#071827f5}.dark-ui .module-selectors a{background:#0d2334;color:#b5cbd8;border-color:#294355}.dark-ui .module-selectors a.selected{background:#173b42;color:#adf3e9;border-color:#47736f;box-shadow:none}.dark-ui .classification{background:transparent;border-color:#365164;color:#c0d6e2}.dark-ui .workflow-checklist{background:#0a1e2e}
+.dark-ui #story-select{background:#102b3b;border-color:#3b596b;color:#edf5fa}.dark-ui .skip{background:#153b46;color:white}
+.dark-ui .qa-page{background:#092338 url('assets/island-cruise.png') center/cover}.dark-ui .qa-page:before{background:linear-gradient(130deg,transparent 35%,#031523bb 100%)}.dark-ui .qa-page h1{color:#f3fbff;font-weight:750}
+.dark-ui :is(.prototype-toolbar button,.fullscreen-controls button){background:transparent;color:#b5f4eb;border-color:#426375}.dark-ui :is(.prototype-toolbar button,.fullscreen-controls button):hover{background:#173845}.dark-ui .prototype-fullscreen,.dark-ui .fullscreen-toolbar{background:#081d2d;color:#edf5fa;border-color:#2a4658}.dark-ui .fullscreen-controls #exit-prototype-fullscreen{background:#8ae7dc;color:#082a30;border-color:#8ae7dc}.dark-ui #prototype-demo{border-color:#345466;box-shadow:none}
+/* The interactive demo keeps its original layout and behavior, with coherent surfaces. */
+@scope (#prototype-demo){:scope{background:#0b2031;color:#dfebf2;--blue:#116874;--navy:#0a2339;--line:#2a495b;color-scheme:dark}.hero{background-image:url('assets/island-cruise.png');background-position:center 46%;height:250px}.hero:before{background:linear-gradient(90deg,#031c3277,transparent 75%)}.context-label{width:fit-content;padding:5px 9px;border-radius:4px;background:#061e36bd}.scope-label{background:#153346;color:#d1e4ee}#consumer,.filter{background:#102d3f;color:#a3efe5}.filter:hover{background:#173e4d}.filter-label{color:#b0c9d8}.filter-row{box-shadow:none}.filter{border-color:#304b5c}.filter[aria-expanded=true]:after{background:#8ae7dc;height:3px}.primary{background:#8ae7dc;color:#052a30;font-weight:600}.primary:hover{background:#b4f6ee}.panel{background:#103a48;color:#effbfb}.option[aria-pressed=true],.month[aria-pressed=true]{background:#a0eee3;color:#05292e}.option:hover,.region:hover{background:#285360}.region[aria-pressed=true]{border-color:#8ae7dc}.month.in-range{background:#ffffff19}.month:disabled{color:#c5d5de;border-color:#79949f;background:repeating-linear-gradient(135deg,#ffffff08 0px,#ffffff08 3px,#061e2e55 3px,#061e2e55 7px)}.reviewer,.reviewer>summary span,.data-note{color:#aec6d5}.submission{background:#10343d;color:#e4f3f4;border-color:#8ae7dc}.submission dt,.eyebrow{color:#b6d3de}.validation{background:#372f20;color:#f4dcac;border-color:#806b40}.filter-row{border-radius:8px}.availability-key,.date-help{color:#d4e8ef}@media(max-width:760px){.hero{height:170px}}}
+@media(max-width:760px){.dark-ui .story-tools{background:#071827}.dark-ui .ocean-art{background-position:48% 46%}.dark-ui .qa-page{background-position:42% center}}
+/* Preserve the cover's original text position after removing its repeated credit. */
+.cover-page .cover-main{padding-bottom:83px}
+
+@scope (#prototype-demo){.hero{background-image:url('assets/prototype-island.png');background-position:center; height:220px}@media(max-width:760px){.hero{height:170px}}}
+.cover-page .cover-main{padding-bottom:89px}@media(max-width:760px){.cover-page .cover-main{padding-bottom:73px}}
+/* Supplied product references take precedence over the presentation theme. */
+@scope (#prototype-demo){
+ #consumer{--blue:#005bda;background:#fff;color:#17314d;color-scheme:light;border-radius:3px;box-shadow:none}
+ .filter-row{background:#fff;border-radius:0;grid-template-columns:repeat(3,minmax(0,1fr)) auto;min-height:104px;padding:0 24px}
+ .filter{background:#fff;color:#005bda;border-color:#edf0f4;padding:25px 22px}
+ .filter:hover{background:#f7faff}.filter-label{color:#5c636a;font-weight:400}
+ .filter-copy{gap:2px;font-size:16px}.filter[aria-expanded=true]:after{height:8px;background:#e6e7e9}
+ .chevron{display:block;width:8px;height:8px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg);font-size:0;margin-right:10px;margin-top:-4px}
+ .filter[aria-expanded=true] .chevron{transform:rotate(225deg);margin-top:4px}
+ .search-cell{padding:20px 24px 20px 46px}.primary{background:#005bda;color:#fff;border-radius:2px;font-weight:400;font-size:12px;letter-spacing:.14em;padding:15px 20px;min-height:44px}
+ .primary:hover{background:#0048b0}
+ .panel{background:#005bda;color:#fff;border-radius:0 0 3px 3px;padding:24px 46px 28px}
+ .options{max-width:1024px;gap:5px 20px}.option{min-height:46px;padding:12px 7px}
+ .option:hover,.region:hover{background:#ffffff18}.option[aria-pressed=true],.month[aria-pressed=true]{background:#fff;color:#005bda}
+ .regions{gap:46px;margin:16px 0 28px}.region[aria-pressed=true]{border-color:#fff}
+ #panel-date{padding-top:60px;padding-bottom:70px}.years{max-width:850px;gap:48px;margin:20px auto 25px}.year h3{font-family:Arial,Helvetica,sans-serif;font-weight:400;margin-bottom:22px}
+ .months{gap:8px 4px}.month{min-height:40px}.month.in-range{background:#ffffff20}.month:disabled{color:#8bb5ef;background:transparent;border-color:transparent;text-decoration:none;opacity:1}
+ .reviewer>summary{padding:17px 22px}.review-content{max-width:none;padding:8px 22px 24px}
+ @media(min-width:761px) and (max-width:1100px){.filter-row{padding:0 10px}.filter{padding:22px 12px}.search-cell{padding:18px 10px}.primary{padding:15px 14px;font-size:10px}.filter-copy{font-size:14px}.years{gap:24px}}
+ @media(max-width:760px){.filter-row{grid-template-columns:1fr;padding:0}.filter{padding:19px 22px}.search-cell{padding:18px 22px}.panel{padding:18px 20px 24px}.regions{gap:15px;margin:0 0 20px}.years{gap:28px 20px;margin:12px auto 0}.month{min-height:43px}#panel-date{padding:20px}.reviewer>summary{padding:16px}.review-content{padding:6px 16px 20px}}
+}

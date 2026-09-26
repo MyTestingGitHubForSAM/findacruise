@@ -19,12 +19,8 @@
     {
       "name": "Prototype past-month guard and simulated search",
       "result": "PASS"
-    },
-    {
-      "name": "Backup unchanged",
-      "result": "PASS"
     }
   ],
   "errors": [],
-  "time": "2026-09-26T02:16:01.417Z"
+  "time": "2026-09-26T20:02:53.132Z"
 }

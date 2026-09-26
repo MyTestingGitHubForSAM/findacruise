@@ -1,0 +1,22 @@
+@font-face{font-family:Manrope;src:url('assets/Manrope-Variable.ttf') format('truetype');font-weight:200 800;font-style:normal;font-display:swap}
+h1,h2,h3,h4{font-family:Manrope,'Segoe UI',Arial,sans-serif;font-weight:750}
+.cover-page{background:#0a2044;color:white;position:relative;isolation:isolate;min-height:100svh}
+.cover-page:before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(4,22,43,.9) 0%,rgba(4,28,49,.64) 38%,rgba(5,29,48,.12) 76%),linear-gradient(0deg,rgba(3,24,43,.6),transparent 50%),url('assets/cover-cruise.png') center/cover no-repeat}
+.cover-page .site-header{background:rgba(4,25,46,.38);border-bottom:1px solid #ffffff30;backdrop-filter:blur(12px)}
+.cover-page .wordmark,.cover-page .identity-context,.cover-page .global-nav a{color:white}
+.cover-page .identity-mark{color:#aff5ed;background:#ffffff0e;border-color:#ffffff50}
+.cover-page .global-nav a:hover,.cover-page .global-nav a:focus-visible{background:#ffffff20;color:white}
+.cover-page a:focus-visible{outline-color:#8ae7dc}
+.cover-page .cover-main{max-width:1440px;margin:auto;padding:clamp(42px,7vh,84px) clamp(24px,5vw,80px) 28px;min-height:calc(100svh - var(--header-height));display:flex;flex-direction:column;justify-content:flex-end;gap:42px}
+.cover-content{max-width:640px}
+.cover-eyebrow{font-size:11px;font-weight:650;letter-spacing:.19em;color:#bcdfeb;margin:0 0 22px}
+.cover-content h1{font-size:clamp(78px,9.5vw,144px);font-weight:800;line-height:.98;letter-spacing:-.065em;margin:0 0 28px}
+.cover-content h1:after{display:none}
+.cover-content h1 span{color:#8ae7dc}
+.cover-description{font-size:clamp(18px,1.6vw,23px);line-height:1.5;max-width:510px;margin:0 0 30px;color:#fff}
+.cover-page .cover-cta{display:inline-flex;align-items:center;gap:32px;background:#fff;color:#102e4b;border:1px solid #fff;padding:16px 22px;box-shadow:0 6px 24px #00152730;font-size:15px}
+.cover-page .cover-cta:hover{background:#bff4ed;border-color:#bff4ed;transform:translateY(-2px)}
+.cover-credit{font-size:11px;letter-spacing:.045em;color:#d6e5ed;margin:0;display:flex;gap:12px}
+@media(max-width:760px){.cover-page:before{background:linear-gradient(0deg,#051e35f5 0%,#051e35bb 48%,#051e3520 100%),url('assets/cover-cruise.png') 68% center/cover no-repeat}.cover-page .cover-main{padding:42px 24px 24px;gap:32px}.cover-content h1{font-size:clamp(70px,15vw,104px)}.cover-description{font-size:18px;max-width:360px}.cover-eyebrow{font-size:10px;letter-spacing:.12em}.cover-page .site-header{background:#061e35b8}.cover-page .cover-cta{padding:15px 18px;gap:22px}.cover-credit{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.cover-page .cover-cta:hover{transform:none}}
+

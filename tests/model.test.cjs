@@ -58,3 +58,5 @@ test('US4 AC8: past-month boundaries and unchanged selections',()=>{
  for(let i=0;i<8;i++){const value=M.month(2026,i);assert.equal(M.available(value),false);assert.deepEqual(M.reduce(M.preset(3),{type:'month',value}),M.preset(3));assert.deepEqual(M.reduce(M.preset(4),{type:'month',value}),M.preset(4));}
  assert.equal(M.available(M.month(2026,8)),true);assert.equal(M.available(M.month(2028,5)),false);
 });
+
+

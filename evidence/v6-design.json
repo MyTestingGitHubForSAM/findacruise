@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "content": "All 12 pages match v5 except explicitly requested removals and labels",
+  "viewports": [
+    1250,
+    390,
+    320
+  ],
+  "errors": []
+}

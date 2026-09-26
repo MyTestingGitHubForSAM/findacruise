@@ -1,14 +1,19 @@
-# Find a Cruise — v4
+# Find a Cruise — v6
 
-Independent visual redesign of v3. Open index.html or run `node server.cjs` and visit http://127.0.0.1:4184. V3 remains unchanged on port 4183.
+Open index.html directly, or run node server.cjs and visit http://127.0.0.1:4186/.
 
-Visual direction: light surfaces, navy typography, blue actions and restrained turquoise accents. Shared geometry, spacing, focus and selected states across eleven pages. Overview and Q&As feature an original local ocean illustration. Stories use a persistent desktop sidebar and a compact mobile selector. No copied third-party CSS, external asset service or downloaded commercial image is required.
+V6 extends the approved photographic cover into a consistent deep-navy, white and turquoise presentation. The cover retains its original styling, with the repeated signature removed and Q&A label corrected. V5 remains in its separate directory.
 
-Content and functional behavior are preserved from v3. `source/baseline` contains the frozen v3 HTML used by the build; tests/content.cjs compares main content and every source-marked unit, excluding decorative elements and the reformatted story selector. Prototype and selected-story storage use separate v4 keys.
+Requested refinements: outline actor tile with user icon, target icon for Product goal, removal of redundant Open badges, Illustrative Reference label, Q&A naming throughout. No other content was rewritten.
 
-Build: `node build.cjs` (Playwright + Microsoft Edge required; PLAYWRIGHT_PATH can specify Playwright).
-Run: `node server.cjs`.
-Tests: `node --test tests/model.test.cjs`, `node tests/prototype-regression.cjs`, `node tests/review.cjs`, `node tests/content.cjs`, `node tests/usability.cjs`.
-Package: `node package.cjs`.
+The overview and Q&A use a new original overhead island/cruise image. The demo uses a matching panoramic overhead asset. These are AI-generated fictional vessels, not official Royal Caribbean photographs. Manrope is bundled locally with its license in assets/Manrope-LICENSE.txt. Runtime is fully local.
 
-All runtime assets are local. Without JavaScript, the story selector links open standalone pages and all Delivery modules remain available; the functional prototype requires JavaScript. Source references are original and unchanged. The drawing in assets/ocean.svg is decorative and was authored for this case study.
+Build: node build.cjs (baseline → upgrade.cjs → theme.cjs).
+Package: node package.cjs.
+Theme: dark.css. Entry: index.html. Case overview: overview.html.
+
+Reference alignment: the consumer search component follows the supplied white/blue reference styling, while the surrounding presentation remains dark. About this prototype has responsive interior padding. Demo dates and behavior are unchanged.
+
+Content addition: US2 AC5, US3 AC6 and US4 AC9 document independent reset to the unrestricted default as an author assumption pending Product Owner / UX confirmation. Each has a linked blocking question with rationale. The existing non-blocking questions about the reset mechanism remain separate from the blocking decision about whether independent reset is required. UI styles and prototype interactions were not changed.
+
+Functional clarification: US4 AC10–AC12 and US5 AC6 formalize existing demo behavior. ASM-01–ASM-07 distinguish author assumptions from source requirements. Blocking scope, reset transitions and the US5 integration-evidence boundary are explicit. No UI stylesheet or runtime interaction logic changed.

@@ -1,0 +1,9 @@
+const fs=require('fs'),path=require('path');
+const root=__dirname;
+const read=f=>fs.readFileSync(path.join(root,f),'utf8');
+const write=(f,s)=>fs.writeFileSync(path.join(root,f),s);
+const pages=['index.html','product.html','stories/index.html',...Array.from({length:5},(_,i)=>`stories/us${i+1}.html`),'prototype.html','delivery.html','qa.html'];
+for(const file of pages){let s=read(file);s=s.replace(/href="(\.\.\/)?index\.html"/g,(m,p)=>`href="${p||''}overview.html"`);s=s.replace(/(class="wordmark" href=")(\.\.\/)?overview\.html"/,(_,a,p)=>a+(p||'')+'index.html"');write(file==='index.html'?'overview.html':file,s)}
+const header=read('overview.html').match(/<header[\s\S]*?<\/header>/)[0].replace(' aria-current="page"','');
+write('index.html',`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Find a Cruise — a product and delivery case study by Sebastian Amodio for Nybble Group."><title>Find a Cruise · Sebastian Amodio</title><link rel="icon" href="data:,"><link rel="preload" href="assets/Manrope-Variable.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="styles.css"><script defer src="navigation.js"></script></head><body data-page="home" class="cover-page"><a class="skip" href="#main">Skip to content</a>${header}<main id="main" tabindex="-1" class="cover-main"><div class="cover-content"><p class="cover-eyebrow">PRODUCT &amp; DELIVERY CASE STUDY</p><h1>Find a<br><span>Cruise</span></h1><p class="cover-description">A Home Page search experience for Royal Caribbean consumers.</p><a class="button cover-cta" href="overview.html">Explore the case study <span aria-hidden="true">→</span></a></div><p class="cover-credit">Sebastian Amodio <span aria-hidden="true">/</span> Nybble Group</p></main></body></html>`);
+console.log('Built v5 cover and linked 11 interior pages');

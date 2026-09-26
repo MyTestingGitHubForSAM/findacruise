@@ -1,0 +1,13 @@
+{
+  "result": "PASS",
+  "checks": [
+    "11 interior pages preserve exact main text from v4",
+    "Five viewport sizes 320–1440",
+    "Local Manrope loaded",
+    "No horizontal overflow",
+    "Cover → overview → cover",
+    "Overview CTA remains inline",
+    "Local page and asset links",
+    "No browser script errors"
+  ]
+}

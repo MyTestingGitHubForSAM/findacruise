@@ -2,7 +2,7 @@
 'use strict';
 const M = window.CruiseModel;
 let state = M.initial();
-const sessionKey = 'find-a-cruise-v4';
+const sessionKey = 'find-a-cruise-v6';
 try {
   const saved = JSON.parse(sessionStorage.getItem(sessionKey));
   if (saved && saved.version === '4') {
@@ -101,5 +101,7 @@ document.addEventListener('keydown', event => {
 render();
 document.getElementById('reset-prototype').addEventListener('click',()=>{state=M.initial();render();$('trigger-destination').focus();$('announcement').textContent='Prototype selections reset.';});
 })();
+
+
 
 
