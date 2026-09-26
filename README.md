@@ -1,15 +1,14 @@
-# Find a Cruise — v3
+# Find a Cruise — v4
 
-Independent presentation edition. Start with index.html or run `node server.cjs` and open http://127.0.0.1:4183. The previous edition remains unchanged in deliverable-v2.1 and runs on port 4181.
+Independent visual redesign of v3. Open index.html or run `node server.cjs` and visit http://127.0.0.1:4184. V3 remains unchanged on port 4183.
 
-Navigation: Case overview → Scope & value → User stories → Interactive demo → Delivery plan → Q&As.
+Visual direction: light surfaces, navy typography, blue actions and restrained turquoise accents. Shared geometry, spacing, focus and selected states across eleven pages. Overview and Q&As feature an original local ocean illustration. Stories use a persistent desktop sidebar and a compact mobile selector. No copied third-party CSS, external asset service or downloaded commercial image is required.
 
-V3 implements all five approved improvements: descriptive section names and consistent page headings; sequential page buttons; persistent compact story selection and section links with a mobile selector; reduced story spacing and repeated explanatory text; direct Delivery module access; consolidated prototype guidance. Story selection and prototype state use separate v3 session keys. Functional behavior and the 26 acceptance criteria are preserved.
+Content and functional behavior are preserved from v3. `source/baseline` contains the frozen v3 HTML used by the build; tests/content.cjs compares main content and every source-marked unit, excluding decorative elements and the reformatted story selector. Prototype and selected-story storage use separate v4 keys.
 
-Eleven public HTML files include five standalone story fallbacks. The site can be opened locally without a server. JavaScript enables in-page story selection, Delivery tabs and the prototype. Without JavaScript, the story links open standalone pages and all Delivery modules remain visible. The prototype requires JavaScript.
+Build: `node build.cjs` (Playwright + Microsoft Edge required; PLAYWRIGHT_PATH can specify Playwright).
+Run: `node server.cjs`.
+Tests: `node --test tests/model.test.cjs`, `node tests/prototype-regression.cjs`, `node tests/review.cjs`, `node tests/content.cjs`, `node tests/usability.cjs`.
+Package: `node package.cjs`.
 
-Regenerate: `node build.cjs`. Build and browser checks require Playwright and Microsoft Edge; set PLAYWRIGHT_PATH for another installed Playwright location. Frozen previous-edition HTML in source/baseline is build input, not a runtime dependency on the backup directory.
-
-Validate: `node --test tests/model.test.cjs`, `node tests/prototype-regression.cjs`, `node tests/review.cjs`, `node tests/links.cjs`. The browser tests use port 4183. Review tests additionally compare all backup files to the pre-change hashes when the sibling backup directory is present.
-
-Package: `node package.cjs`. No remote Google Doc was edited. This is a presentation revision; the previously supplied manual content amendments remain applicable.
+All runtime assets are local. Without JavaScript, the story selector links open standalone pages and all Delivery modules remain available; the functional prototype requires JavaScript. Source references are original and unchanged. The drawing in assets/ocean.svg is decorative and was authored for this case study.

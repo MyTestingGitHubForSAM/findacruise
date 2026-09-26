@@ -1,0 +1,14 @@
+{
+  "result": "PASS",
+  "checks": [
+    "Native fullscreen and viewport fallback",
+    "Home context and same reset control",
+    "Selection preserved on enter/exit",
+    "Date selection",
+    "Reset",
+    "Escape and focus restoration",
+    "Repeated entry",
+    "Mobile port selection"
+  ],
+  "errors": []
+}

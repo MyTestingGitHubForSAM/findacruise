@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "checks": [
+    "Story switching returns to summary",
+    "Keyboard story selection and visible focus",
+    "600px calendar containment",
+    "Keyboard selection and Escape dismissal",
+    "Reduced motion"
+  ]
+}

@@ -2,10 +2,10 @@
 'use strict';
 const M = window.CruiseModel;
 let state = M.initial();
-const sessionKey = 'find-a-cruise-v3';
+const sessionKey = 'find-a-cruise-v4';
 try {
   const saved = JSON.parse(sessionStorage.getItem(sessionKey));
-  if (saved && saved.version === '3') {
+  if (saved && saved.version === '4') {
     for (const [type,value] of [['destination',saved.destination],['port',saved.port],['region',saved.region]]) state=M.reduce(state,{type,value});
     if (M.available(saved.start)) state=M.reduce(state,{type:'month',value:saved.start});
     if (M.available(saved.start) && M.available(saved.end) && saved.end>=saved.start) state=M.reduce(state,{type:'month',value:saved.end});
@@ -28,13 +28,13 @@ $('assumptions').innerHTML = assumptions.map(text => '<li>' + escape(text) + '</
 function fitPanels() {
   const row = document.querySelector('.filter-row').getBoundingClientRect();
   document.querySelectorAll('.panel').forEach(panel => {
-    panel.style.maxHeight = `${Math.max(160, window.innerHeight - row.bottom - 20)}px`;
+    panel.style.maxHeight = `${Math.max(80, window.innerHeight - row.bottom - 20 - (document.querySelector('.presentation-footer')?.getBoundingClientRect().height || 0))}px`;
   });
 }
 window.addEventListener('resize', fitPanels);
-window.addEventListener('scroll', fitPanels, { passive: true });
+window.addEventListener('scroll', fitPanels, { passive: true, capture: true });
 function render() {
-  try { sessionStorage.setItem(sessionKey,JSON.stringify({version:'3',destination:state.destination,port:state.port,region:state.region,start:state.start,end:state.end})); } catch {}
+  try { sessionStorage.setItem(sessionKey,JSON.stringify({version:'4',destination:state.destination,port:state.port,region:state.region,start:state.start,end:state.end})); } catch {}
   const focused = document.activeElement;
   const focusAction = focused?.dataset.action;
   const focusValue = focused?.dataset.value;
@@ -75,9 +75,11 @@ document.addEventListener('click', event => {
     const oldPanel = state.panel;
     if (action === 'panel' && state.panel !== value) {
       const row = document.querySelector('.filter-row').getBoundingClientRect();
-      if (row.bottom > window.innerHeight - 200 || row.top < 75) {
-        const top = row.top + window.scrollY - (window.innerWidth > 760 ? 80 : 12);
-        window.scrollTo({ top, behavior: 'instant' });
+      if (row.bottom > window.innerHeight - 200 - (document.querySelector('.presentation-footer')?.getBoundingClientRect().height || 0) || row.top < 75) {
+        const modal = document.querySelector('#prototype-fullscreen[open]');
+        const offset = modal ? modal.querySelector('.fullscreen-toolbar').getBoundingClientRect().height + 12 : (window.innerWidth > 760 ? 80 : 12);
+        const top = row.top + (modal ? modal.scrollTop : window.scrollY) - offset;
+        (modal || window).scrollTo({ top, behavior: 'instant' });
       }
     }
     state = M.reduce(state, { type: action === 'clear-destination' ? 'destination' : action === 'clear-port' ? 'port' : action, value: action.startsWith('clear-') ? null : action === 'month' ? Number(value) : value });
@@ -99,4 +101,5 @@ document.addEventListener('keydown', event => {
 render();
 document.getElementById('reset-prototype').addEventListener('click',()=>{state=M.initial();render();$('trigger-destination').focus();$('announcement').textContent='Prototype selections reset.';});
 })();
+
 

@@ -20,3 +20,5 @@
 .hero{height:185px}.prototype-main{margin-top:-30px}.masthead{padding-left:4%;padding-right:4%}.context-label{left:4%}.prototype-main{padding-left:3%;padding-right:3%} @media(max-width:760px){.hero{height:110px}.prototype-main{padding:0 12px 20px}.masthead{flex-wrap:wrap;gap:15px}.filter{padding:15px 18px}}
 }
 @scope (#prototype-demo) { section{margin:0} .reviewer{background:transparent;border-right:0;border-bottom:0;border-left:0} .submission{margin-top:24px} }
+/* V4 visual refinement; behavior and source reference images remain unchanged. */
+@scope (#prototype-demo){:scope{--navy:#092851;--blue:#005bda}.hero{background-image:url('assets/ocean.svg');background-position:center 42%}.filter-row{border-radius:12px;box-shadow:0 10px 24px #0c346c16}.primary{border-radius:7px}.panel{border-radius:0 0 12px 12px}.reviewer{border-radius:10px}.submission{border-radius:12px}}
